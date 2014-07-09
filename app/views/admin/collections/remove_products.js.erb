@@ -1,0 +1,3 @@
+$("#product_name_search").val("");
+$("#unassociated_product_ids").html("<%=j options_for_select((Product.all - @collection.products).map { |p| [p.name, p.id] }) %>");
+$("#associated_product_ids").html("<%=j options_for_select((@collection.products).map { |p| [p.name, p.id] }) %>");

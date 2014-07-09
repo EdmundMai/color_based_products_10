@@ -1,0 +1,41 @@
+<%= link_to "All Returns", admin_returns_path %>
+
+<h3>Return Info</h3>
+
+<%= form_for [:admin, @return] do |form| %>
+	<div>
+		<%= form.label :amount, "Amount Returned" %><br>
+		<%= form.text_field :amount %>
+	</div>
+
+	<div>
+		<%= form.label :status %>
+		<%= form.select :status, [Return::PROCESSING, Return::RECEIVED] %>
+	</div>
+	
+	<div>
+		<%= form.label :admin_comment %><br>
+		<%= form.text_area :admin_comment %>
+	</div>
+
+	<%= form.submit "Update" %>
+<% end %>
+
+<% order = @return.order %>
+
+<div>Date: <%= @return.created_at.strftime("%m/%d/%Y") %></div>
+<div>RMA Code: <%= @return.rma_code %></div>
+<div>Reason: <%= @return.reason %></div>
+<div>Email: <%= order.user.registered_email %></div>
+
+<h3>Items</h3>
+<% @return.return_items.each do |return_item| %>
+<% line_item = return_item.line_item %>
+<div>Product: <%= line_item.variant.product.name %></div>
+<div>Color: <%= line_item.variant.products_color.color.name %></div>
+<div>Size: <%= line_item.variant.size.name %></div>
+<div>SKU: <%= line_item.variant.sku %></div>
+<div>Unit Price: <%= humanized_money_with_symbol line_item.unit_price %></div>
+<div>Quantity: <%= return_item.quantity %></div><br>
+<% end %>
+

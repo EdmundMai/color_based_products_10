@@ -1,0 +1,62 @@
+<%= link_to "All Collections", admin_collections_path %>
+
+<h1>Edit Collection</h1>
+
+<%= form_for [:admin, @collection] do |form| %>
+
+<ul>
+	<% @collection.errors.full_messages.each do |error|  %>
+		<li><%= error %></li>
+	<% end %>
+</ul>
+
+<div>
+	<%= form.label :name %>
+	<%= form.text_field :name %>
+</div>
+
+<div>
+	<%= form.label :short_description %>
+	<%= form.text_area :short_description %>
+</div>
+
+<div>
+	<%= form.label :long_description %>
+	<%= form.text_area :long_description %>
+</div>
+
+<div>
+	<%= form.radio_button :active, true, checked: form.object.active? %>
+	Active
+	<%= form.radio_button :active, false, checked: !form.object.active? %>
+	Inactive
+</div>
+
+<h3>Products</h3>
+<div>
+	Search Available Products by Name: <%= text_field_tag :product_name_search %>
+	<%= link_to "Reset", "#", onclick: "reset_product_search_for_collection(#{@collection.id})" %>
+	<%= hidden_field_tag :collection_id, @collection.id %>
+</div>
+
+<div class="unassociated_product_ids_div inline_block">
+	Available Products:<br>
+	<%= select_tag :unassociated_product_ids, options_for_select((Product.all - @collection.products).map { |p| [p.name, p.id] }), {multiple: true, class: "product_multiselect"} %>
+</div>
+
+<div class="transfer_product_links inline_block">
+	<%= link_to ">", '#', remote: true, onclick: "add_products_to_collection(#{@collection.id})" %><br>
+	<%= link_to "<", '#', remote: true, onclick: "remove_products_from_collection(#{@collection.id})" %>
+</div>
+
+<div class="associated_product_ids_div inline_block">
+	Chosen Products:<br>
+	<%= select_tag :associated_product_ids, options_for_select(@collection.products.map { |p| [p.name, p.id] }), {multiple: true, class: "product_multiselect"} %>
+</div>
+
+<br>
+<%= form.submit %>
+
+<% end %>
+
+<%= link_to "Delete Collection", admin_collection_path(@collection), method: :delete, confirm: "Are you sure?" %>

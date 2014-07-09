@@ -1,0 +1,41 @@
+<%= link_to "All Orders", orders_path %><br>
+
+<h1>Return for Order #<%= @return.order_id %></h1>
+
+
+<%= form_for @return, url: order_returns_url do |form| %>
+
+<ul>
+<% @return.errors.full_messages.each do |error| %>
+	<li><%= error %></li>
+<% end %>
+</ul>
+
+
+<%= form.hidden_field :order_id, value: @return.order_id %>
+<%= form.hidden_field :user_id, value: @return.user_id %>
+<%= form.fields_for :return_items do |ri| %>
+	<% unless ri.object.line_item.returnable_quantity < 1 %>
+		<div>
+			<%= ri.check_box :chosen %>
+			<%= "#{ri.object.line_item.variant.product.name} - #{ri.object.line_item.variant.color.name} - #{ri.object.line_item.variant.size.name}" %>
+			<%= ri.hidden_field :line_item_id, value: ri.object.line_item.id %>
+			<%= ri.select :quantity, (1..ri.object.line_item.returnable_quantity).to_a %>
+		</div>
+	<% end %>
+<% end %>
+
+<br>
+
+<div>
+	<% reasons = ["Different from website description", "Item is damaged", "Better price available", "Dissatisfied with item", "Other"]%>
+	<%= form.label :reason %>
+	<%= form.select :reason, reasons, prompt: "Select one" %>
+</div>
+
+
+<%= form.hidden_field :status, value: Return::PROCESSING %>
+<br>
+<%= form.submit %>
+
+<% end %>

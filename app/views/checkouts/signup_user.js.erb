@@ -1,0 +1,14 @@
+<% if current_or_guest_user.errors.present? %>
+	$(".user_info_errors").empty();
+	<% guest_user.errors.full_messages.each do |error_message| %>
+		$(".user_info_errors").append("<li><%= error_message %></li>");
+	<% end %>	
+	jQuery('html,body').animate({scrollTop:0},300);
+<% else %>
+$("nav").html("<%=j render 'shared/navbar' %>");
+$(".user_info").fadeOut();
+
+$(".payment_info :input").attr("disabled", false);
+
+//$("#payment_info_order_id").val("<%= current_user.last_incomplete_order.id %>");
+<% end %>

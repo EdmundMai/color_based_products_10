@@ -1,0 +1,23 @@
+<%= link_to "New Coupon", new_admin_coupon_path %>
+
+
+<%= will_paginate @coupons %>
+
+<table>
+  <thead>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Amount</th>
+    <th>Code</th>
+  </thead>
+
+
+  <% @coupons.each do |coupon| %>
+  <tr>
+    <td><%= link_to coupon.id, edit_admin_coupon_path(coupon) %></td>
+    <td><%= coupon.name %></td>
+    <td><%= coupon.value_prettified %></td>
+    <td><%= coupon.code %></td>
+  </tr>
+  <% end %>
+</table>

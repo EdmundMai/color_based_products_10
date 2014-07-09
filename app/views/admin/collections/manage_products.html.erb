@@ -1,0 +1,13 @@
+<%= will_paginate @products %>
+
+<table>
+	<thead>
+		<th>Name</th>
+	</thead>
+	
+	<% @products.each do |product| %>
+	<tr>
+		<td class="collection_products_td" id="<%= product.id %>"><%= product.name %></td>
+	</tr>
+	<% end %>
+</table>

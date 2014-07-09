@@ -1,0 +1,12 @@
+<% if resource.errors.full_messages.present? %>
+
+	$(".user_info_errors").empty();
+	<% resource.errors.full_messages.each do |error| %>
+		$(".user_info_errors").append("<li><%= error %></li>");
+	<% end %>
+	jQuery('html,body').animate({scrollTop:0},300);
+<% else %>
+	$("nav").html("<%=j render 'shared/navbar' %>");
+	$(".user_info").fadeOut();
+	$(".payment_info_first_part :input").attr("disabled", false);
+<% end %>

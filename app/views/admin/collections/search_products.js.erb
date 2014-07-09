@@ -1,0 +1,1 @@
+$("#unassociated_product_ids").html("<%=j options_for_select((@products - @collection.products).map { |p| [p.name, p.id] }) %>");

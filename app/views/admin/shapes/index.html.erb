@@ -1,0 +1,19 @@
+<h1>Shapes</h1>
+
+<%= link_to "New Shape", new_admin_shape_path %>
+
+<%= will_paginate @shapes %>
+<table>
+	<thead>
+<th>ID</th>
+<th>Name</th>
+</thead>
+<% @shapes.each do |shape| %>
+<tr>
+
+	<td><%= link_to shape.id, edit_admin_shape_path(shape) %></td>
+	<td><%= shape.name %></td>
+
+</tr>
+<% end %>
+</table>

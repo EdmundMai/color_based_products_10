@@ -1,0 +1,7 @@
+<%= link_to "All Vendors", admin_vendors_path %>
+
+<h1>Edit Vendor</h1>
+
+<%= render 'form' %>
+
+<%= link_to "Delete Vendor", admin_vendor_path(@vendor), method: :delete, confirm: "Are you sure?" %>

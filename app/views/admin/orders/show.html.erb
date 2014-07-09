@@ -1,0 +1,48 @@
+<%= link_to "All Orders", admin_orders_path %>
+
+<h3>Order Info</h3>
+
+<%= form_for [:admin, @order] do |form| %>
+  <%= form.label :tracking_number %>
+  <%= form.text_field :tracking_number %><br>
+
+	<%= form.collection_select :status, Order.status_options, :to_s, :to_s %>
+	<%= form.submit "Update" %>
+<% end %>
+
+<div>Email: <%= @order.user.registered_email %></div>
+<div>Order Date: <%= @order.order_date.try(:strftime, "%m/%d/%Y") %></div>
+<div>Subtotal: <%= humanized_money_with_symbol @order.subtotal %></div>
+<div>Shipping: <%= humanized_money_with_symbol @order.shipping %></div>
+<div>Tax: <%= humanized_money_with_symbol @order.tax %></div>
+<div>Total: <%= humanized_money_with_symbol @order.total %></div>
+
+<h3>Line Items</h3>
+<% @order.line_items.each do |line_item| %>
+<div>Product: <%= line_item.variant.product.name %></div>
+<div>Color: <%= line_item.variant.products_color.color.name %></div>
+<div>Size: <%= line_item.variant.size.name %></div>
+<div>SKU: <%= line_item.variant.sku %></div>
+<div>Unit Price: <%= humanized_money_with_symbol line_item.unit_price %></div>
+<div>Quantity: <%= line_item.quantity %></div><br>
+<% end %>
+
+<h3>Shipping Address</h3>
+<div>First Name: <%= @order.shipping_address.first_name %></div>
+<div>Last Name: <%= @order.shipping_address.last_name %></div>
+<div>Street Address: <%= @order.shipping_address.street_address %></div>
+<div>Apt/Suite: <%= @order.shipping_address.street_address2 %></div>
+<div>City: <%= @order.shipping_address.city %></div>
+<div>State: <%= @order.shipping_address.state.short_name %></div>
+<div>Zip Code: <%= @order.shipping_address.zip_code %></div>
+<div>Phone Number: <%= @order.shipping_address.phone_number %></div>
+
+<h3>Billing Address</h3>
+<div>First Name: <%= @order.billing_address.first_name %></div>
+<div>Last Name: <%= @order.billing_address.last_name %></div>
+<div>Street Address: <%= @order.billing_address.street_address %></div>
+<div>Apt/Suite: <%= @order.billing_address.street_address2 %></div>
+<div>City: <%= @order.billing_address.city %></div>
+<div>State: <%= @order.billing_address.state.short_name %></div>
+<div>Zip Code: <%= @order.billing_address.zip_code %></div>
+<div>Phone Number: <%= @order.billing_address.phone_number %></div>

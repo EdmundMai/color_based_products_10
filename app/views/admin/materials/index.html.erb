@@ -1,0 +1,19 @@
+<h1>Materials</h1>
+
+<%= link_to "New Material", new_admin_material_path %>
+
+<%= will_paginate @materials %>
+<table>
+	<thead>
+<th>ID</th>
+<th>Name</th>
+</thead>
+<% @materials.each do |material| %>
+<tr>
+
+	<td><%= link_to material.id, edit_admin_material_path(material) %></td>
+	<td><%= material.name %></td>
+
+</tr>
+<% end %>
+</table>

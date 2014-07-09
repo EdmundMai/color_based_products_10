@@ -1,0 +1,51 @@
+<%= form_for [:admin, @coupon], url: (@coupon.new_record? ? admin_coupons_path : admin_coupon_path(@coupon)), as: :coupon do |form| %>
+
+<ul>
+<% @coupon.errors.full_messages.each do |error| %>
+	<li><%= error %></li>
+<% end %>
+</ul>
+
+<div>
+	<%= form.label :name %>
+	<%= form.text_field :name %>
+</div>
+
+<div>
+	<%= form.label :code %>
+	<%= form.text_field :code %>
+</div>
+
+<div>
+	<%= form.label :type %>
+	<%= form.collection_select :type, [["Free Shipping", "FreeShippingCoupon"], ["Flat Amount", "FlatCoupon"], ["Percentage Amount", "PercentageCoupon"]], :last, :first, {} %>
+</div>
+
+<div class="coupon_value_div">
+	<%= form.label :value, "Discount amount" %>
+	<%= form.collection_select :value, (5..95).step(5).map { |number| [(form.object.type == "PercentageCoupon" ? "#{number}%" : number_to_currency(number)), number] }, :last, :first, {selected: form.object.value.to_i}  %>
+</div>
+
+<div>
+	<%= form.label :minimum_purchase_amount %>
+	<%= form.collection_select :minimum_purchase_amount, (5..200).step(5).map { |number| [number_to_currency(number), number] }, :last, :first, {selected: form.object.minimum_purchase_amount.to_f.to_i}  %>
+</div>
+
+<div>
+	<%= form.label :start_date %>
+	<%= form.text_field :start_date, value: (form.object.start_date.try(:strftime, "%m/%d/%Y")), class: "datepicker" %>
+</div>
+
+<div>
+	<%= form.label :end_date %>
+	<%= form.text_field :end_date, value: (form.object.end_date.try(:strftime, "%m/%d/%Y")), class: "datepicker" %>
+</div>
+
+<div>
+	<%= form.label :site_wide %> 
+	<%= form.check_box :site_wide %> (If this is checked, the coupon code field in the checkout form will automatically be filled in with this coupon's code for as long as this coupon is active.)
+</div>
+
+<%= form.submit (@coupon.new_record? ? "Create Coupon" : "Update Coupon") %>
+
+<% end %>

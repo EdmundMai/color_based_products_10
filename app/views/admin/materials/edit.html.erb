@@ -1,0 +1,7 @@
+<%= link_to "All Materials", admin_materials_path %>
+
+<h1>Edit Material</h1>
+
+<%= render 'form' %>
+
+<%= link_to "Delete Material", admin_material_path(@material), method: :delete, confirm: "Are you sure?" %>

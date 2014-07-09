@@ -1,0 +1,8 @@
+$(".payment_info :input").attr("disabled", false);
+$(".order_info :input").attr("disabled", true);
+
+$(".payment_info_errors").empty();
+$(".payment_info_errors").append("<li><%= @usaepay.result %></li>");
+$(".payment_info_errors").append("<li><%= @usaepay.error %></li>");
+
+jQuery('html,body').animate({scrollTop:0},300);

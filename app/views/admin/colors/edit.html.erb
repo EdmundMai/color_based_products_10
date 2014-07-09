@@ -1,0 +1,7 @@
+<%= link_to "All Colors", admin_colors_path %>
+
+<h1>Edit Color</h1>
+
+<%= render 'form' %>
+
+<%= link_to "Delete Color", admin_color_path(@color), method: :delete, confirm: "Are you sure?" %>

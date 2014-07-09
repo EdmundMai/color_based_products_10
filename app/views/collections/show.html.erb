@@ -1,0 +1,6 @@
+<h1><%= @collection.name %></h1>
+
+<% @collection.products.each do |product| %>
+	<%= link_to product.name, product_path(product) %><br>
+<% end %>
+

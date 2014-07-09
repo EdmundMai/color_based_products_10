@@ -1,0 +1,54 @@
+<h1>Discounts</h1>
+
+<%= form_tag apply_admin_discounts_path, method: :patch do %>
+
+<h3>Products</h3>
+<div class="inline_block">
+		Available Products:<br>
+		<%= collection_select :available_products_for_discounts, :ids, ProductsColor.includes(:product, :color).order("products.name ASC, colors.name").map { |pc| [pc.id, "#{pc.product.name} - #{pc.color.name}"]}, :first, :last, {}, {multiple: true, class: "product_multiselect"} %>
+</div>
+<div class="inline_block">
+	<%= link_to ">", "#", id: "add_product_to_discounts_list" %><br>
+	<%= link_to "<", "#", id: "remove_product_from_discounts_list"%>
+</div>
+<div class="inline_block">
+	Chosen Products:<br>
+	<%= collection_select :chosen_products_for_discounts, :ids, [], :first, :last, {}, {multiple: true, class: "product_multiselect"} %>
+</div>
+
+
+<h3>Collections</h3>
+<div class="inline_block">
+		Available Collections:<br>
+		<%= collection_select :available_collections_for_discounts, :ids, Collection.active, :id, :name, {}, {multiple: true, class: "product_multiselect"} %>
+</div>
+<div class="inline_block">
+	<%= link_to ">", "#", id: "add_collection_to_discounts_list" %><br>
+	<%= link_to "<", "#", id: "remove_collection_from_discounts_list"%>
+</div>
+<div class="inline_block">
+	Chosen Collections:<br>
+	<%= collection_select :chosen_collections_for_discounts, :ids, [], :first, :last, {}, {multiple: true, class: "product_multiselect"} %>
+</div>
+<br>
+<br>
+
+<div>
+	Percentage Off:
+	<%= select_tag :percentage, options_from_collection_for_select((5..95).step(5).map { |n| [n/100.00, "#{n}%"]}, :first, :last) %>
+</div>
+
+<div>
+	<%= submit_tag "Apply Discount", name: "apply" %>
+</div>
+
+<h3>OR</h3>
+
+<div>
+	<%= submit_tag "Remove All Discounts", name: "remove" %>
+</div>
+
+
+
+
+<% end %>

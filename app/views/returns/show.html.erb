@@ -1,0 +1,23 @@
+<%= link_to "All Orders", orders_path %><br>
+
+
+<%= link_to "View Return Slip", order_return_path(@return.order, @return, format: :pdf) %>
+<h3>Return Info</h3>
+	
+	
+
+<div>Order ID: <%= @return.order_id %></div>
+<div>Status: <%= @return.status %></div>
+<div>Amount Returned: <%= humanized_money_with_symbol @return.amount %></div>
+<div>Reason: <%= @return.reason %></div>
+<div>RMA Code: <%= @return.rma_code %></div>
+<div>Admin Comment: <%= @return.admin_comment %></div>
+
+<h3>Items:</h3>
+<% @return.return_items.each do |return_item| %>
+<div>
+	Quantity: <%= return_item.quantity %>
+	<%= return_item.line_item.variant.product.name %> -  <%= return_item.line_item.variant.color.name %> -
+	<%= return_item.line_item.variant.size.name %>
+</div>
+<% end %>

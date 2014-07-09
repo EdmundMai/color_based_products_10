@@ -1,0 +1,12 @@
+<%= form_for [:admin, @material] do |form| %>
+	<ul>
+		<% @material.errors.full_messages.each do |error| %>
+			<li><%= error %></li>
+		<% end %>
+	</ul>
+
+	<%= form.label :name %>
+	<%= form.text_field :name %><br>
+	
+	<%= form.submit %>
+<% end %>

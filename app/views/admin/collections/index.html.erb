@@ -1,0 +1,18 @@
+<%= link_to "New Collection", new_admin_collection_path %>
+
+<%= will_paginate @collections %>
+
+<table>
+  <thead>
+    <th>ID</th>
+    <th>Name</th>
+  </thead>
+
+
+  <% @collections.each do |collection| %>
+  <tr>
+    <td><%= link_to collection.id, edit_admin_collection_path(collection) %></td>
+    <td><%= collection.name %></td>
+  </tr>
+  <% end %>
+</table>

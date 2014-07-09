@@ -1,0 +1,615 @@
+
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-09 17:30:55 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by SiteController#index as HTML
+USER SESSION VARIABLES ARE: [[1], "$2a$10$Kv0fxINRANH8cWFkavZkqO"]
+COOKIE[:AUTH_TOKEN] IS: nil
+COOKIE[:GUEST_USER_ID] IS: nil
+  Rendered site/index.html.erb within layouts/application (2.0ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  Rendered shared/_navbar.html.erb (10.4ms)
+Completed 200 OK in 3196ms (Views: 3176.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2014-07-09 17:30:59 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-09 17:30:59 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-09 17:30:59 -0400
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-07-09 17:30:59 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-09 17:30:59 -0400
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2014-07-09 17:30:59 -0400
+
+
+Started GET "/assets/jquery.remotipart.js?body=1" for 127.0.0.1 at 2014-07-09 17:30:59 -0400
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2014-07-09 17:30:59 -0400
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2014-07-09 17:30:59 -0400
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2014-07-09 17:30:59 -0400
+
+
+Started GET "/assets/jquery.ui.accordion.js?body=1" for 127.0.0.1 at 2014-07-09 17:30:59 -0400
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2014-07-09 17:30:59 -0400
+
+
+Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2014-07-09 17:30:59 -0400
+
+
+Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2014-07-09 17:30:59 -0400
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.0.0.1 at 2014-07-09 17:30:59 -0400
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2014-07-09 17:30:59 -0400
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2014-07-09 17:30:59 -0400
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.0.0.1 at 2014-07-09 17:30:59 -0400
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.0.0.1 at 2014-07-09 17:30:59 -0400
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.0.0.1 at 2014-07-09 17:30:59 -0400
+
+
+Started GET "/assets/jquery.ui.droppable.js?body=1" for 127.0.0.1 at 2014-07-09 17:30:59 -0400
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2014-07-09 17:30:59 -0400
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2014-07-09 17:30:59 -0400
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2014-07-09 17:30:59 -0400
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2014-07-09 17:30:59 -0400
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2014-07-09 17:30:59 -0400
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2014-07-09 17:30:59 -0400
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2014-07-09 17:30:59 -0400
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2014-07-09 17:30:59 -0400
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2014-07-09 17:30:59 -0400
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2014-07-09 17:30:59 -0400
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:00 -0400
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:00 -0400
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:00 -0400
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:00 -0400
+
+
+Started GET "/assets/jquery.ui.progressbar.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:00 -0400
+
+
+Started GET "/assets/jquery.ui.selectable.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:00 -0400
+
+
+Started GET "/assets/jquery.ui.slider.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:00 -0400
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:00 -0400
+
+
+Started GET "/assets/jquery.ui.spinner.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:00 -0400
+
+
+Started GET "/assets/jquery.ui.tabs.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:00 -0400
+
+
+Started GET "/assets/jquery.ui.tooltip.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:00 -0400
+
+
+Started GET "/assets/jquery.ui.all.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:00 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:00 -0400
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:00 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:00 -0400
+
+
+Started GET "/products" for 127.0.0.1 at 2014-07-09 17:31:06 -0400
+Processing by ProductsController#index as HTML
+USER SESSION VARIABLES ARE: nil
+COOKIE[:AUTH_TOKEN] IS: nil
+COOKIE[:GUEST_USER_ID] IS: nil
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT `products`.* FROM `products`  WHERE `products`.`active` = 1  ORDER BY name ASC[0m
+  Rendered products/index.html.erb within layouts/application (5.5ms)
+  Rendered shared/_navbar.html.erb (1.6ms)
+Completed 200 OK in 58ms (Views: 41.5ms | ActiveRecord: 3.2ms)
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `products` (`active`, `created_at`, `long_description`, `meta_description`, `name`, `page_title`, `short_description`, `updated_at`) VALUES (1, '2014-07-09 21:31:39', 'L0ngD3sc', 'My Meta Description', 'Lorem1', 'My Title', 'sh0rtDesC', '2014-07-09 21:31:39')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mColor Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM `colors`  WHERE `colors`.`name` = BINARY 'my-color1' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `colors` (`created_at`, `image`, `name`, `updated_at`) VALUES ('2014-07-09 21:31:39', 'sample_img.jpg', 'my-color1', '2014-07-09 21:31:39')
+  [1m[36m (2.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `products_colors` (`color_id`, `created_at`, `mens`, `product_id`, `updated_at`, `womens`) VALUES (1, '2014-07-09 21:31:39', 0, 1, '2014-07-09 21:31:39', 0)[0m
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `sizes` (`created_at`, `name`, `sort_order`, `updated_at`) VALUES ('2014-07-09 21:31:39', 'my-size1', 1, '2014-07-09 21:31:39')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `variants` (`created_at`, `in_stock`, `list_price_cents`, `measurements`, `size_id`, `sku`, `updated_at`, `weight`) VALUES ('2014-07-09 21:31:39', 1, 1122, 'MyString', 1, 'abc123', '2014-07-09 21:31:39', 9.99)[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE `variants` SET `products_color_id` = 1, `updated_at` = '2014-07-09 21:31:39' WHERE `variants`.`id` = 1
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `product_images` (`created_at`, `image`, `updated_at`) VALUES ('2014-07-09 21:31:40', 'sample_img.jpg', '2014-07-09 21:31:40')[0m
+  [1m[35m (11.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE `product_images` SET `products_color_id` = 1, `updated_at` = '2014-07-09 21:31:40' WHERE `product_images`.`id` = 1
+  [1m[36m (15.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mColor Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM `colors`  WHERE `colors`.`name` = BINARY 'my-color2' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `colors` (`created_at`, `image`, `name`, `updated_at`) VALUES ('2014-07-09 21:31:40', 'sample_img.jpg', 'my-color2', '2014-07-09 21:31:40')
+  [1m[36m (3.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `products_colors` (`color_id`, `created_at`, `mens`, `product_id`, `updated_at`, `womens`) VALUES (2, '2014-07-09 21:31:40', 0, 1, '2014-07-09 21:31:40', 0)[0m
+  [1m[35m (1.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `sizes` (`created_at`, `name`, `sort_order`, `updated_at`) VALUES ('2014-07-09 21:31:40', 'my-size2', 2, '2014-07-09 21:31:40')
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `variants` (`created_at`, `in_stock`, `list_price_cents`, `measurements`, `size_id`, `sku`, `updated_at`, `weight`) VALUES ('2014-07-09 21:31:40', 1, 1122, 'MyString', 2, 'abc123', '2014-07-09 21:31:40', 9.99)[0m
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE `variants` SET `products_color_id` = 2, `updated_at` = '2014-07-09 21:31:40' WHERE `variants`.`id` = 2
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `product_images` (`created_at`, `image`, `updated_at`) VALUES ('2014-07-09 21:31:40', 'sample_img.jpg', '2014-07-09 21:31:40')[0m
+  [1m[35m (1.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE `product_images` SET `products_color_id` = 2, `updated_at` = '2014-07-09 21:31:40' WHERE `product_images`.`id` = 2
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-09 17:31:44 -0400
+Processing by SiteController#index as HTML
+USER SESSION VARIABLES ARE: nil
+COOKIE[:AUTH_TOKEN] IS: nil
+COOKIE[:GUEST_USER_ID] IS: nil
+  Rendered site/index.html.erb within layouts/application (0.3ms)
+  Rendered shared/_navbar.html.erb (0.6ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2014-07-09 17:31:44 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-09 17:31:44 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:44 -0400
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:44 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:44 -0400
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:44 -0400
+
+
+Started GET "/assets/jquery.remotipart.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:44 -0400
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:44 -0400
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:44 -0400
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:44 -0400
+
+
+Started GET "/assets/jquery.ui.accordion.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:44 -0400
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:44 -0400
+
+
+Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:44 -0400
+
+
+Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:44 -0400
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:44 -0400
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:44 -0400
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:44 -0400
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:44 -0400
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:44 -0400
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:44 -0400
+
+
+Started GET "/assets/jquery.ui.droppable.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:44 -0400
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:44 -0400
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:44 -0400
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:44 -0400
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:44 -0400
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:44 -0400
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:44 -0400
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:44 -0400
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:44 -0400
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:44 -0400
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:44 -0400
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:44 -0400
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:44 -0400
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:44 -0400
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:44 -0400
+
+
+Started GET "/assets/jquery.ui.progressbar.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:44 -0400
+
+
+Started GET "/assets/jquery.ui.selectable.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:44 -0400
+
+
+Started GET "/assets/jquery.ui.slider.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:44 -0400
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:44 -0400
+
+
+Started GET "/assets/jquery.ui.spinner.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:44 -0400
+
+
+Started GET "/assets/jquery.ui.tabs.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:44 -0400
+
+
+Started GET "/assets/jquery.ui.tooltip.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:44 -0400
+
+
+Started GET "/assets/jquery.ui.all.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:45 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:45 -0400
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:45 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-09 17:31:45 -0400
+
+
+Started GET "/products" for 127.0.0.1 at 2014-07-09 17:31:58 -0400
+Processing by ProductsController#index as HTML
+USER SESSION VARIABLES ARE: nil
+COOKIE[:AUTH_TOKEN] IS: nil
+COOKIE[:GUEST_USER_ID] IS: nil
+  [1m[35mProduct Load (0.8ms)[0m  SELECT `products`.* FROM `products`  WHERE `products`.`active` = 1  ORDER BY name ASC
+  Rendered products/index.html.erb within layouts/application (16.8ms)
+  Rendered shared/_navbar.html.erb (0.6ms)
+Completed 200 OK in 39ms (Views: 36.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/products/1" for 127.0.0.1 at 2014-07-09 17:31:59 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+USER SESSION VARIABLES ARE: nil
+COOKIE[:AUTH_TOKEN] IS: nil
+COOKIE[:GUEST_USER_ID] IS: nil
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT  `products`.* FROM `products`  WHERE `products`.`id` = 1  ORDER BY name ASC LIMIT 1[0m
+  [1m[35mProductsColor Load (0.6ms)[0m  SELECT `products_colors`.* FROM `products_colors`  WHERE `products_colors`.`product_id` = 1
+  [1m[36mColor Load (0.3ms)[0m  [1mSELECT  `colors`.* FROM `colors`  WHERE `colors`.`id` = 1  ORDER BY name ASC LIMIT 1[0m
+  [1m[35mVariant Load (0.6ms)[0m  SELECT `variants`.* FROM `variants`  WHERE `variants`.`products_color_id` = 1
+  [1m[36mSize Load (0.6ms)[0m  [1mSELECT  `sizes`.* FROM `sizes`  WHERE `sizes`.`id` = 1  ORDER BY sort_order ASC LIMIT 1[0m
+  [1m[35mColor Load (0.6ms)[0m  SELECT  `colors`.* FROM `colors`  WHERE `colors`.`id` = 2  ORDER BY name ASC LIMIT 1
+  [1m[36mVariant Load (0.3ms)[0m  [1mSELECT `variants`.* FROM `variants`  WHERE `variants`.`products_color_id` = 2[0m
+  [1m[35mSize Load (0.2ms)[0m  SELECT  `sizes`.* FROM `sizes`  WHERE `sizes`.`id` = 2  ORDER BY sort_order ASC LIMIT 1
+  Rendered products/show.html.erb within layouts/application (185.8ms)
+  Rendered shared/_navbar.html.erb (0.7ms)
+Completed 200 OK in 210ms (Views: 164.8ms | ActiveRecord: 42.7ms)
+
+
+Started POST "/checkout/add_to_cart" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+Processing by CheckoutsController#add_to_cart as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GziqksI9WZnW1Bjb4ZMHVUCg2jObiBaPmHnQWlL2LWs=", "quantity"=>"1", "variant_id"=>"1", "commit"=>"Add to cart"}
+USER SESSION VARIABLES ARE: nil
+COOKIE[:AUTH_TOKEN] IS: nil
+COOKIE[:GUEST_USER_ID] IS: nil
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM `users`  WHERE `users`.`guest` = 1 AND `users`.`guest_email` = 'guest_140494152098@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `users` (`created_at`, `guest`, `guest_email`, `updated_at`) VALUES ('2014-07-09 21:32:00', 1, 'guest_140494152098@example.com', '2014-07-09 21:32:00')[0m
+  [1m[35mCart Load (0.4ms)[0m  SELECT  `carts`.* FROM `carts`  WHERE `carts`.`user_id` = 1 LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `carts` (`created_at`, `updated_at`, `user_id`) VALUES ('2014-07-09 21:32:00', '2014-07-09 21:32:00', 1)[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCart Load (0.3ms)[0m  SELECT  `carts`.* FROM `carts`  WHERE `carts`.`user_id` = 1 LIMIT 1
+  [1m[36mCartItem Load (0.3ms)[0m  [1mSELECT  `cart_items`.* FROM `cart_items`  WHERE `cart_items`.`cart_id` = 1 AND `cart_items`.`variant_id` = 1  ORDER BY `cart_items`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mCart Load (0.4ms)[0m  [1mSELECT  `carts`.* FROM `carts`  WHERE `carts`.`id` = 1 LIMIT 1[0m
+  [1m[35mVariant Load (0.3ms)[0m  SELECT  `variants`.* FROM `variants`  WHERE `variants`.`id` = 1 LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `cart_items` (`cart_id`, `created_at`, `quantity`, `updated_at`, `variant_id`) VALUES (1, '2014-07-09 21:32:00', 1, '2014-07-09 21:32:00', 1)[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/checkout
+Completed 302 Found in 170ms (ActiveRecord: 15.1ms)
+
+
+Started GET "/checkout" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+Processing by CheckoutsController#show as HTML
+USER SESSION VARIABLES ARE: nil
+COOKIE[:AUTH_TOKEN] IS: nil
+COOKIE[:GUEST_USER_ID] IS: 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCart Load (0.2ms)[0m  SELECT  `carts`.* FROM `carts`  WHERE `carts`.`user_id` = 1 LIMIT 1
+  [1m[36mCartItem Load (0.2ms)[0m  [1mSELECT `cart_items`.* FROM `cart_items`  WHERE `cart_items`.`cart_id` = 1[0m
+  [1m[35mVariant Load (0.3ms)[0m  SELECT  `variants`.* FROM `variants`  WHERE `variants`.`id` = 1 LIMIT 1
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT  `products`.* FROM `products` INNER JOIN `products_colors` ON `products`.`id` = `products_colors`.`product_id` WHERE `products_colors`.`id` = 1  ORDER BY name ASC LIMIT 1[0m
+  [1m[35mSize Load (0.3ms)[0m  SELECT  `sizes`.* FROM `sizes`  WHERE `sizes`.`id` = 1  ORDER BY sort_order ASC LIMIT 1
+  [1m[36mProductsColor Load (0.2ms)[0m  [1mSELECT  `products_colors`.* FROM `products_colors`  WHERE `products_colors`.`id` = 1 LIMIT 1[0m
+  [1m[35mColor Load (0.5ms)[0m  SELECT  `colors`.* FROM `colors`  WHERE `colors`.`id` = 1  ORDER BY name ASC LIMIT 1
+  Rendered checkouts/show.html.erb within layouts/application (37.2ms)
+  Rendered shared/_navbar.html.erb (0.4ms)
+Completed 200 OK in 61ms (Views: 56.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/assets/jquery.turbolinks.js?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/assets/jquery.remotipart.js?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/assets/jquery.ui.accordion.js?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/assets/jquery.ui.droppable.js?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/assets/jquery.ui.effect-blind.js?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/assets/jquery.ui.effect-bounce.js?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/assets/jquery.ui.effect-clip.js?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/assets/jquery.ui.effect-drop.js?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/assets/jquery.ui.effect-explode.js?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/assets/jquery.ui.effect-fade.js?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/assets/jquery.ui.effect-fold.js?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/assets/jquery.ui.effect-highlight.js?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/assets/jquery.ui.effect-pulsate.js?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/assets/jquery.ui.effect-scale.js?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/assets/jquery.ui.effect-shake.js?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/assets/jquery.ui.effect-slide.js?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/assets/jquery.ui.effect-transfer.js?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/assets/jquery.ui.progressbar.js?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/assets/jquery.ui.selectable.js?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/assets/jquery.ui.slider.js?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/assets/jquery.ui.spinner.js?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/assets/jquery.ui.tabs.js?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/assets/jquery.ui.tooltip.js?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/assets/jquery.ui.all.js?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-09 17:32:00 -0400
+
+
+Started GET "/checkout/billing" for 127.0.0.1 at 2014-07-09 17:32:01 -0400
+Processing by CheckoutsController#billing as HTML
+USER SESSION VARIABLES ARE: nil
+COOKIE[:AUTH_TOKEN] IS: nil
+COOKIE[:GUEST_USER_ID] IS: 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mOrder Load (0.4ms)[0m  SELECT  `orders`.* FROM `orders`  WHERE `orders`.`user_id` = 1 AND `orders`.`status` = 'Incomplete'  ORDER BY `orders`.`id` ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `orders` (`created_at`, `status`, `updated_at`, `user_id`) VALUES ('2014-07-09 21:32:01', 'Incomplete', '2014-07-09 21:32:01', 1)
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mCoupon Load (0.4ms)[0m  SELECT  `coupons`.* FROM `coupons`  WHERE (DATE(start_date) <= '2014-07-09' AND DATE(end_date) >= '2014-07-09') AND `coupons`.`site_wide` = 1  ORDER BY `coupons`.`id` DESC LIMIT 1
+  [1m[36mState Load (0.5ms)[0m  [1mSELECT `states`.* FROM `states`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `states`.* FROM `states`
+  [1m[36mCart Load (0.7ms)[0m  [1mSELECT  `carts`.* FROM `carts`  WHERE `carts`.`user_id` = 1 LIMIT 1[0m
+  [1m[35mCartItem Load (0.3ms)[0m  SELECT `cart_items`.* FROM `cart_items`  WHERE `cart_items`.`cart_id` = 1
+  [1m[36mVariant Load (0.3ms)[0m  [1mSELECT  `variants`.* FROM `variants`  WHERE `variants`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  `products`.* FROM `products` INNER JOIN `products_colors` ON `products`.`id` = `products_colors`.`product_id` WHERE `products_colors`.`id` = 1  ORDER BY name ASC LIMIT 1
+  [1m[36mSize Load (0.3ms)[0m  [1mSELECT  `sizes`.* FROM `sizes`  WHERE `sizes`.`id` = 1  ORDER BY sort_order ASC LIMIT 1[0m
+  Rendered checkouts/billing.html.erb within layouts/application (128.4ms)
+  Rendered shared/_navbar.html.erb (0.4ms)
+Completed 200 OK in 304ms (Views: 146.4ms | ActiveRecord: 12.1ms)
+
+
+Started POST "/checkout/signup_user" for 127.0.0.1 at 2014-07-09 17:32:12 -0400
+Processing by CheckoutsController#signup_user as JS
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"abc@yahoo.com", "password"=>"[FILTERED]", "guest"=>"false"}, "commit"=>"Sign up"}
+USER SESSION VARIABLES ARE: nil
+COOKIE[:AUTH_TOKEN] IS: nil
+COOKIE[:GUEST_USER_ID] IS: 1
+  [1m[35mUser Load (0.5ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT  1 AS one FROM `users`  WHERE (`users`.`email` = BINARY 'abc@yahoo.com' AND `users`.`id` != 1) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE `users` SET `email` = 'abc@yahoo.com', `encrypted_password` = '$2a$10$0CHi9pKPfEpkpXOvoAdR0uZwPrdRivCWwrtI/qXS.Hxx6t8TGkmzq', `guest` = 0, `updated_at` = '2014-07-09 21:32:12' WHERE `users`.`id` = 1[0m
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (8.8ms)[0m  UPDATE `users` SET `current_sign_in_at` = '2014-07-09 21:32:12', `current_sign_in_ip` = '127.0.0.1', `last_sign_in_at` = '2014-07-09 21:32:12', `last_sign_in_ip` = '127.0.0.1', `sign_in_count` = 1, `updated_at` = '2014-07-09 21:32:12' WHERE `users`.`id` = 1
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `roles` INNER JOIN `users_roles` ON `roles`.`id` = `users_roles`.`role_id` WHERE `users_roles`.`user_id` = 1 AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))
+  Rendered shared/_navbar.html.erb (18.4ms)
+  [1m[36mOrder Load (0.3ms)[0m  [1mSELECT  `orders`.* FROM `orders`  WHERE `orders`.`user_id` = 1 AND `orders`.`status` = 'Incomplete'  ORDER BY `orders`.`id` ASC LIMIT 1[0m
+  Rendered checkouts/signup_user.js.erb (23.5ms)
+Completed 200 OK in 121ms (Views: 22.1ms | ActiveRecord: 17.2ms)
