@@ -129,7 +129,6 @@ class PaymentInfo
       end
     rescue Exception => e
       Rails.logger.info "Checkout form part 1 error: #{e.inspect}"
-      # puts"Checkout form part 1 error: #{e.inspect}"
       false
     end
 

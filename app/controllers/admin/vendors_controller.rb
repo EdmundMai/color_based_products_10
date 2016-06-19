@@ -6,19 +6,19 @@ class Admin::VendorsController < Admin::BaseController
       format.html { redirect_to edit_admin_vendor_path(@vendor), notice: "Your vendor was successfully created."}
     end
   end
-  
+
   def new
     @vendor = Vendor.new
   end
-  
+
   def index
     @vendors = Vendor.all.paginate(page: params[:page], per_page: 30)
   end
-  
+
   def edit
     @vendor = Vendor.find(params[:id])
   end
-  
+
   def update
     @vendor = Vendor.find(params[:id])
     if @vendor.update_attributes(vendor_params)
@@ -27,17 +27,17 @@ class Admin::VendorsController < Admin::BaseController
       render 'edit'
     end
   end
-  
+
   def destroy
     @vendor = Vendor.find(params[:id])
     @vendor.destroy
     redirect_to admin_vendors_path, notice: "Your vendor was successfully deleted."
   end
-  
+
   private
-  
-    def vendor_params
-      params.require(:vendor).permit(:name)
-    end
-  
+
+  def vendor_params
+    params.require(:vendor).permit(:name)
+  end
+
 end

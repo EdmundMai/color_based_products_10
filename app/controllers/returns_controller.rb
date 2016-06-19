@@ -1,5 +1,4 @@
 class ReturnsController < ApplicationController
-
   before_action :authenticate_user!
 
   def new
@@ -8,7 +7,7 @@ class ReturnsController < ApplicationController
       @return.return_items.build(line_item_id: line_item.id)
     end
   end
-  
+
   def create
     @return = Return.new(return_params)
     @return.generate_rma_code
@@ -21,7 +20,7 @@ class ReturnsController < ApplicationController
       render 'new'
     end
   end
-  
+
   def show
     @return = Return.find_by(order_id: params[:order_id], id: params[:id])
     respond_to do |format|
@@ -29,9 +28,9 @@ class ReturnsController < ApplicationController
       format.pdf
     end
   end
-  
+
   private
-  
+
   def return_params
     params.require(:return).permit(:order_id,
                                    :reason,
@@ -43,5 +42,4 @@ class ReturnsController < ApplicationController
                                      :quantity
                                    ])
   end
-
 end
