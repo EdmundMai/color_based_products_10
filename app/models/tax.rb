@@ -1,6 +1,6 @@
 class Tax < ActiveRecord::Base
   belongs_to :state
-  
+
   def self.update_rate!(args={})
     if args[:state_code] == "NY"
       zip_code = args.fetch(:zip_code) { raise 'Zip code not provided' }

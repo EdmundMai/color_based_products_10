@@ -1,15 +1,14 @@
 class ProductsColor < ActiveRecord::Base
   has_many :variants, dependent: :destroy
   has_many :product_images, -> { order("sort_order ASC") }, dependent: :destroy
-  
-  accepts_nested_attributes_for :variants, :reject_if => proc { |attributes| attributes['size_id'].blank? }, :allow_destroy => true
-  accepts_nested_attributes_for :product_images, :reject_if => proc { |attributes| attributes['image'].blank? }, :allow_destroy => true
-  
   belongs_to :product
   belongs_to :color
-  
+
+  accepts_nested_attributes_for :variants, :reject_if => proc { |attributes| attributes['size_id'].blank? }, :allow_destroy => true
+  accepts_nested_attributes_for :product_images, :reject_if => proc { |attributes| attributes['image'].blank? }, :allow_destroy => true
+
   validates_presence_of :color
-  
+
   def product_images_attributes=(attrs)
     if attrs[:image].present?
       attrs[:image].each do |image|
@@ -17,7 +16,7 @@ class ProductsColor < ActiveRecord::Base
       end
     end
   end
-  
+
   def variants_attributes=(attrs)
     if self.new_record?
       super(attrs)
@@ -28,6 +27,4 @@ class ProductsColor < ActiveRecord::Base
       end
     end
   end
-  
-  
 end

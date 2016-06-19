@@ -3,20 +3,18 @@ class PaymentInfo
   extend ActiveModel::Naming
   include ActiveModel::Conversion
   include ActiveModel::Validations
-  
+
   def persisted?
     false
   end
-  
+
   attribute :credit_card_number, String
   attribute :credit_card_exp_mm, String
   attribute :credit_card_exp_yyyy, String
   attribute :credit_card_cvv, String
-  
-  
+
   attribute :coupon_code, String
 
-  
   attribute :order_id, Integer
   attribute :shipping_address_first_name, String
   attribute :shipping_address_last_name, String
@@ -26,8 +24,7 @@ class PaymentInfo
   attribute :shipping_address_city, String
   attribute :shipping_address_state_id, Integer
   attribute :shipping_address_phone_number, String
-  
-  
+
   attribute :billing_address_first_name, String
   attribute :billing_address_last_name, String
   attribute :billing_address_street_address, String
@@ -51,29 +48,29 @@ class PaymentInfo
       end
     end
   end
-  
+
   def coupon_code_entered?
     coupon_code.present?
   end
-  
+
   def coupon_validator
     @coupon_validator ||= CouponValidator.new(coupon: coupon, order: order, coupon_code_entered: coupon_code_entered?)
   end
-  
+
   def coupon
     @coupon ||= Coupon.find_by(code: coupon_code)
   end
-  
+
   def tax_validator
     @tax_validator ||= TaxValidator.new(zip_code: shipping_address.zip_code, state_id: shipping_address.state_id)
   end
-  
+
   def order
     @order ||= Order.find(order_id)
   end
 
   def shipping_address
-    attrs = {        
+    attrs = {
         first_name: shipping_address_first_name,
         last_name: shipping_address_last_name,
         street_address: shipping_address_street_address,
@@ -91,9 +88,9 @@ class PaymentInfo
     end
     @shipping_address
   end
-  
+
   def billing_address
-    attrs = {        
+    attrs = {
         first_name: billing_address_first_name,
         last_name: billing_address_last_name,
         street_address: billing_address_street_address,
@@ -111,25 +108,24 @@ class PaymentInfo
     end
     @billing_address
   end
-  
+
 
   def save
     return false unless valid?
     process_billing_info!
   end
-  
-  private
-  
-    def process_billing_info!
-      ActiveRecord::Base.transaction do
-        billing_address.save!
-        shipping_address.save!
-        order.attach_coupon!(coupon) if coupon_code_entered?
-        order.update_all_fees!
-      end
-    rescue Exception => e
-      Rails.logger.info "Checkout form part 1 error: #{e.inspect}"
-      false
-    end
 
+  private
+
+  def process_billing_info!
+    ActiveRecord::Base.transaction do
+      billing_address.save!
+      shipping_address.save!
+      order.attach_coupon!(coupon) if coupon_code_entered?
+      order.update_all_fees!
+    end
+  rescue Exception => e
+    Rails.logger.info "Checkout form part 1 error: #{e.inspect}"
+    false
+  end
 end
