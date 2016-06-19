@@ -1,35 +1,35 @@
 <% if current_user %>
-	$("nav").html("<%=j render 'shared/navbar' %>");
-	$(".user_info").fadeOut();
+  $("nav").html("<%=j render 'shared/navbar' %>");
+  $(".user_info").fadeOut();
 
   $(".payment_info :input").attr("disabled", false);
-  
-	<% if current_user.last_complete_order %>
-		<% shipping_address = current_user.last_complete_order.shipping_address %>
-		$("#payment_info_shipping_address_first_name").val("<%= shipping_address.first_name %>");
-		$("#payment_info_shipping_address_last_name").val("<%= shipping_address.last_name %>");
-		$("#payment_info_shipping_address_street_address").val("<%= shipping_address.street_address %>");
-		$("#payment_info_shipping_address_street_address2").val("<%= shipping_address.street_address2 %>");
-		$("#payment_info_shipping_address_city").val("<%= shipping_address.city %>");
-		$("#payment_info_shipping_address_city").val("<%= shipping_address.city %>");
-		$("#payment_info_shipping_address_state_id").val("<%= shipping_address.state_id %>");
-		$("#payment_info_shipping_address_zip_code").val("<%= shipping_address.zip_code %>");
-		$("#payment_info_shipping_address_phone_number").val("<%= shipping_address.phone_number %>");
-	
-		<% billing_address = current_user.last_complete_order.billing_address %>
-		$("#payment_info_billing_address_first_name").val("<%= billing_address.first_name %>");
-		$("#payment_info_billing_address_last_name").val("<%= billing_address.last_name %>");
-		$("#payment_info_billing_address_street_address").val("<%= billing_address.street_address %>");
-		$("#payment_info_billing_address_street_address2").val("<%= billing_address.street_address2 %>");
-		$("#payment_info_billing_address_city").val("<%= billing_address.city %>");
-		$("#payment_info_billing_address_city").val("<%= billing_address.city %>");
-		$("#payment_info_billing_address_state_id").val("<%= billing_address.state_id %>");
-		$("#payment_info_billing_address_zip_code").val("<%= billing_address.zip_code %>");
-		$("#payment_info_billing_address_phone_number").val("<%= billing_address.phone_number %>");
-	<% end %>
-	//$("#payment_info_order_id").val("<%= current_user.last_incomplete_order.id %>");
+
+  <% if current_user.last_complete_order %>
+    <% shipping_address = current_user.last_complete_order.shipping_address %>
+    $("#payment_info_shipping_address_first_name").val("<%= shipping_address.first_name %>");
+    $("#payment_info_shipping_address_last_name").val("<%= shipping_address.last_name %>");
+    $("#payment_info_shipping_address_street_address").val("<%= shipping_address.street_address %>");
+    $("#payment_info_shipping_address_street_address2").val("<%= shipping_address.street_address2 %>");
+    $("#payment_info_shipping_address_city").val("<%= shipping_address.city %>");
+    $("#payment_info_shipping_address_city").val("<%= shipping_address.city %>");
+    $("#payment_info_shipping_address_state_id").val("<%= shipping_address.state_id %>");
+    $("#payment_info_shipping_address_zip_code").val("<%= shipping_address.zip_code %>");
+    $("#payment_info_shipping_address_phone_number").val("<%= shipping_address.phone_number %>");
+
+    <% billing_address = current_user.last_complete_order.billing_address %>
+    $("#payment_info_billing_address_first_name").val("<%= billing_address.first_name %>");
+    $("#payment_info_billing_address_last_name").val("<%= billing_address.last_name %>");
+    $("#payment_info_billing_address_street_address").val("<%= billing_address.street_address %>");
+    $("#payment_info_billing_address_street_address2").val("<%= billing_address.street_address2 %>");
+    $("#payment_info_billing_address_city").val("<%= billing_address.city %>");
+    $("#payment_info_billing_address_city").val("<%= billing_address.city %>");
+    $("#payment_info_billing_address_state_id").val("<%= billing_address.state_id %>");
+    $("#payment_info_billing_address_zip_code").val("<%= billing_address.zip_code %>");
+    $("#payment_info_billing_address_phone_number").val("<%= billing_address.phone_number %>");
+  <% end %>
+  //$("#payment_info_order_id").val("<%= current_user.last_incomplete_order.id %>");
 <% else %>
-	$(".user_info_errors").empty();
-	$(".user_info_errors").append("<li>The email and password you entered are incorrect. Please try again.</li>");
-	jQuery('html,body').animate({scrollTop:0},300);
+  $(".user_info_errors").empty();
+  $(".user_info_errors").append("<li>The email and password you entered are incorrect. Please try again.</li>");
+  jQuery('html,body').animate({scrollTop:0},300);
 <% end %>

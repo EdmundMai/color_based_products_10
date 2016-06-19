@@ -1,6 +1,5 @@
 require 'csv'
 class FileParser
-  
   def self.update_tax_rates(file)
     CSV.open(file).each do |line|
       state_code = line[0]
@@ -9,5 +8,4 @@ class FileParser
       Tax.update_rate!(state_code: state_code, zip_code: zip_code, rate: new_tax_rate)
     end
   end
-  
 end

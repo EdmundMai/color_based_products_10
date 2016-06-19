@@ -1,12 +1,12 @@
 <%= form_for [:admin, @category] do |form| %>
-	<ul>
-		<% @category.errors.full_messages.each do |error| %>
-			<li><%= error %></li>
-		<% end %>
-	</ul>
+  <ul>
+    <% @category.errors.full_messages.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
 
-	<%= form.label :name %>
-	<%= form.text_field :name %><br>
-	
-	<%= form.submit %>
+  <%= form.label :name %>
+  <%= form.text_field :name %><br>
+
+  <%= form.submit %>
 <% end %>

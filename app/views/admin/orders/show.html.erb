@@ -6,8 +6,8 @@
   <%= form.label :tracking_number %>
   <%= form.text_field :tracking_number %><br>
 
-	<%= form.collection_select :status, Order.status_options, :to_s, :to_s %>
-	<%= form.submit "Update" %>
+  <%= form.collection_select :status, Order.status_options, :to_s, :to_s %>
+  <%= form.submit "Update" %>
 <% end %>
 
 <div>Email: <%= @order.user.registered_email %></div>
@@ -19,12 +19,12 @@
 
 <h3>Line Items</h3>
 <% @order.line_items.each do |line_item| %>
-<div>Product: <%= line_item.variant.product.name %></div>
-<div>Color: <%= line_item.variant.products_color.color.name %></div>
-<div>Size: <%= line_item.variant.size.name %></div>
-<div>SKU: <%= line_item.variant.sku %></div>
-<div>Unit Price: <%= humanized_money_with_symbol line_item.unit_price %></div>
-<div>Quantity: <%= line_item.quantity %></div><br>
+  <div>Product: <%= line_item.variant.product.name %></div>
+  <div>Color: <%= line_item.variant.products_color.color.name %></div>
+  <div>Size: <%= line_item.variant.size.name %></div>
+  <div>SKU: <%= line_item.variant.sku %></div>
+  <div>Unit Price: <%= humanized_money_with_symbol line_item.unit_price %></div>
+  <div>Quantity: <%= line_item.quantity %></div><br>
 <% end %>
 
 <h3>Shipping Address</h3>

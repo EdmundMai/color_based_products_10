@@ -1,17 +1,17 @@
 <div>
-	Subtotal: <%= humanized_money_with_symbol order.subtotal %>
+  Subtotal: <%= humanized_money_with_symbol order.subtotal %>
 </div>
 <div>
-	Shipping: <%= humanized_money_with_symbol order.shipping %>
+  Shipping: <%= humanized_money_with_symbol order.shipping %>
 </div>
 <% unless order.savings == 0 %>
-<div>
-	Savings: <%= humanized_money_with_symbol order.savings %>
+  <div>
+    Savings: <%= humanized_money_with_symbol order.savings %>
 </div>
 <% end %>
 <div>
-	Tax: <%= humanized_money_with_symbol order.tax %>
+  Tax: <%= humanized_money_with_symbol order.tax %>
 </div>
 <div>
-	Total: <%= humanized_money_with_symbol order.total %>
+  Total: <%= humanized_money_with_symbol order.total %>
 </div>

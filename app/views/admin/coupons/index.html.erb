@@ -13,11 +13,11 @@
 
 
   <% @coupons.each do |coupon| %>
-  <tr>
-    <td><%= link_to coupon.id, edit_admin_coupon_path(coupon) %></td>
-    <td><%= coupon.name %></td>
-    <td><%= coupon.value_prettified %></td>
-    <td><%= coupon.code %></td>
-  </tr>
+    <tr>
+      <td><%= link_to coupon.id, edit_admin_coupon_path(coupon) %></td>
+      <td><%= coupon.name %></td>
+      <td><%= coupon.value_prettified %></td>
+      <td><%= coupon.code %></td>
+    </tr>
   <% end %>
 </table>

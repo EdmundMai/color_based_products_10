@@ -4,16 +4,16 @@
 
 <%= will_paginate @shapes %>
 <table>
-	<thead>
-<th>ID</th>
-<th>Name</th>
-</thead>
-<% @shapes.each do |shape| %>
-<tr>
+  <thead>
+    <th>ID</th>
+    <th>Name</th>
+  </thead>
+  <% @shapes.each do |shape| %>
+    <tr>
 
-	<td><%= link_to shape.id, edit_admin_shape_path(shape) %></td>
-	<td><%= shape.name %></td>
+      <td><%= link_to shape.id, edit_admin_shape_path(shape) %></td>
+      <td><%= shape.name %></td>
 
-</tr>
-<% end %>
+    </tr>
+  <% end %>
 </table>

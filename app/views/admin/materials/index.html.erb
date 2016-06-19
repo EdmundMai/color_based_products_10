@@ -4,16 +4,16 @@
 
 <%= will_paginate @materials %>
 <table>
-	<thead>
-<th>ID</th>
-<th>Name</th>
-</thead>
-<% @materials.each do |material| %>
-<tr>
+  <thead>
+    <th>ID</th>
+    <th>Name</th>
+  </thead>
+  <% @materials.each do |material| %>
+    <tr>
 
-	<td><%= link_to material.id, edit_admin_material_path(material) %></td>
-	<td><%= material.name %></td>
+      <td><%= link_to material.id, edit_admin_material_path(material) %></td>
+      <td><%= material.name %></td>
 
-</tr>
-<% end %>
+    </tr>
+  <% end %>
 </table>

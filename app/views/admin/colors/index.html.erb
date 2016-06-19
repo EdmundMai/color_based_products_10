@@ -5,7 +5,7 @@
 <%= will_paginate @colors %>
 
 <ol>
-<% @colors.each do |color| %>
-	<li><%= link_to color.name, edit_admin_color_path(color) %></li>
-<% end %>
+  <% @colors.each do |color| %>
+    <li><%= link_to color.name, edit_admin_color_path(color) %></li>
+  <% end %>
 </ol>

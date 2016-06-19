@@ -4,28 +4,28 @@
 
 <%= form_for [:admin, @collection] do |form| %>
 
-<ul>
-	<% @collection.errors.full_messages.each do |error|  %>
-		<li><%= error %></li>
-	<% end %>
-</ul>
+  <ul>
+    <% @collection.errors.full_messages.each do |error|  %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
 
-<div>
-	<%= form.label :name %>
-	<%= form.text_field :name %>
-</div>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
 
-<div>
-	<%= form.label :short_description %>
-	<%= form.text_area :short_description %>
-</div>
+  <div>
+    <%= form.label :short_description %>
+    <%= form.text_area :short_description %>
+  </div>
 
-<div>
-	<%= form.label :long_description %>
-	<%= form.text_area :long_description %>
-</div>
+  <div>
+    <%= form.label :long_description %>
+    <%= form.text_area :long_description %>
+  </div>
 
 
-<%= form.submit %>
+  <%= form.submit %>
 
 <% end %>

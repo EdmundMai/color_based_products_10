@@ -4,16 +4,14 @@
 
 <%= will_paginate @categories %>
 <table>
-	<thead>
-<th>ID</th>
-<th>Name</th>
-</thead>
-<% @categories.each do |category| %>
-<tr>
-
-	<td><%= link_to category.id, edit_admin_category_path(category) %></td>
-	<td><%= category.name %></td>
-
-</tr>
-<% end %>
+  <thead>
+    <th>ID</th>
+    <th>Name</th>
+  </thead>
+  <% @categories.each do |category| %>
+    <tr>
+      <td><%= link_to category.id, edit_admin_category_path(category) %></td>
+      <td><%= category.name %></td>
+    </tr>
+  <% end %>
 </table>

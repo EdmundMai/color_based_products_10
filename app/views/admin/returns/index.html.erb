@@ -8,22 +8,22 @@
 
 <%= will_paginate @returns, params: { q: @search_terms } %>
 <table>
-	<thead>
-<th>ID</th>
-<th>Date</th>
-<th>Status</th>
-<th>RMA Code</th>
-<th>Amount Returned</th>
-</thead>
-<% @returns.each do |r| %>
-<tr>
+  <thead>
+    <th>ID</th>
+    <th>Date</th>
+    <th>Status</th>
+    <th>RMA Code</th>
+    <th>Amount Returned</th>
+  </thead>
+  <% @returns.each do |r| %>
+    <tr>
 
-	<td><%= link_to r.id, admin_return_path(r) %></td>
-	<td><%= r.created_at.strftime("%m/%d/%Y") %></td>
-	<td><%= r.status %></td>
-	<td><%= r.rma_code %></td>
-	<td><%= humanized_money_with_symbol r.amount %></td>
+      <td><%= link_to r.id, admin_return_path(r) %></td>
+      <td><%= r.created_at.strftime("%m/%d/%Y") %></td>
+      <td><%= r.status %></td>
+      <td><%= r.rma_code %></td>
+      <td><%= humanized_money_with_symbol r.amount %></td>
 
-</tr>
-<% end %>
+    </tr>
+  <% end %>
 </table>

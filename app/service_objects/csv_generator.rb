@@ -1,7 +1,6 @@
 require 'csv'
 
 class CsvGenerator
-  
   def self.orders_report(from_date, to_date)
     CSV.generate(:col_sep => "|", quote_char: '"') do |csv|
       orders = Order.where("DATE(order_date) >= ? and DATE(order_date) <= ? and status in (?)", from_date, to_date, [Order::IN_PROGRESS, Order::SHIPPED]).order("order_date ASC")
@@ -76,6 +75,4 @@ class CsvGenerator
       end
     end
   end
-  
 end
-  

@@ -4,16 +4,16 @@
 
 <%= will_paginate @vendors %>
 <table>
-	<thead>
-<th>ID</th>
-<th>Name</th>
-</thead>
-<% @vendors.each do |vendor| %>
-<tr>
+  <thead>
+    <th>ID</th>
+    <th>Name</th>
+  </thead>
+  <% @vendors.each do |vendor| %>
+    <tr>
 
-	<td><%= link_to vendor.id, edit_admin_vendor_path(vendor) %></td>
-	<td><%= vendor.name %></td>
+      <td><%= link_to vendor.id, edit_admin_vendor_path(vendor) %></td>
+      <td><%= vendor.name %></td>
 
-</tr>
-<% end %>
+    </tr>
+  <% end %>
 </table>

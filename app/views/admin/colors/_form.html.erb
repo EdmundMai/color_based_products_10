@@ -1,22 +1,22 @@
 <%= form_for [:admin, @color], multipart: true do |form| %>
 
-<div>
-	<%= form.label :name %>
-	<%= form.text_field :name %>
-</div>
-<div>
-	<% if form.object.image.present? %>
-	<div class="color_image">
-		<%= image_tag form.object.image_url, width: '100' %>
-		<%= link_to "Delete Image", delete_image_admin_color_path(@color), method: :delete, remote: true, confirm: "Are you sure?" %>
-		<br>
-	</div>
-	<% end %>
-	
-	<%= form.label :image %>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+  <div>
+    <% if form.object.image.present? %>
+      <div class="color_image">
+        <%= image_tag form.object.image_url, width: '100' %>
+        <%= link_to "Delete Image", delete_image_admin_color_path(@color), method: :delete, remote: true, confirm: "Are you sure?" %>
+        <br>
+      </div>
+    <% end %>
 
-	<%= form.file_field :image %>
-</div>
+    <%= form.label :image %>
 
-<%= form.submit %>
+    <%= form.file_field :image %>
+  </div>
+
+  <%= form.submit %>
 <% end %>
