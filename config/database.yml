@@ -5,13 +5,12 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: mysql2
+  adapter: sqlite3
   encoding: utf8
   reconnect: false
   pool: 5
   username: root
-  password: 
-  host: 127.0.0.1
+  password:
 
 development:
   <<: *default

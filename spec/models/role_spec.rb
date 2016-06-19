@@ -1,7 +1,5 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe Role do
-  its(:attributes) { should include("name") }
-  its(:attributes) { should include("resource_id") }
-  its(:attributes) { should include("resource_type") }
+RSpec.describe Role, type: :model do
+  pending "add some examples to (or delete) #{__FILE__}"
 end
